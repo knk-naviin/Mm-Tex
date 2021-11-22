@@ -25,6 +25,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="mm_tex">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <meta name="google-signin-client_id" content="1091773453003-orvit5g62633t78a08vmucrhap08ocog.apps.googleusercontent.com">
 
   <title>mm_tex</title>
   <link rel="manifest" href="manifest.json">
@@ -98,35 +99,14 @@
     }
   </script>
 
-<!--  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>-->
-<!--  &lt;!&ndash; Firebase Auth SDK &ndash;&gt;-->
-<!--  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"></script>-->
-<!--  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js"></script>-->
-<!--  <script>-->
-<!--  var firebaseConfig = {-->
-<!--    apiKey: "AIzaSyDFHMpgcXYR07hoxP30j6iYqJpjkvaCRi4",-->
-<!--    authDomain: "mmtex-db26f.firebaseapp.com",-->
-<!--    projectId: "mmtex-db26f",-->
-<!--    storageBucket: "mmtex-db26f.appspot.com",-->
-<!--    messagingSenderId: "1091773453003",-->
-<!--    appId: "1:1091773453003:web:b84bf811713234eb5c014e",-->
-<!--    measurementId: "G-E130HEJ3DY"-->
-<!--  };-->
-
-<!--  // Initialize Firebase-->
-<!--&lt;!&ndash;  const app = initializeApp(firebaseConfig);&ndash;&gt;-->
-<!--&lt;!&ndash;  const analytics = getAnalytics(app);&ndash;&gt;-->
-
-<!--firebase.initializeApp(firebaseConfig);-->
-<!--firebase.analytics;-->
-
-<!--</script>-->
-  <script src="main.dart.js" type="application/javascript"></script>
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
-
-
+  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+  <!-- Firebase Auth SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-core.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>
   const firebaseConfig = {
     apiKey: "AIzaSyDFHMpgcXYR07hoxP30j6iYqJpjkvaCRi4",
     authDomain: "mmtex-db26f.firebaseapp.com",
@@ -137,8 +117,30 @@
     measurementId: "G-E130HEJ3DY"
   };
 
+  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+
+firebase.initializeApp(firebaseConfig);
+firebase.analytics;
+
 </script>
+<!--  <script type="module">-->
+
+
+
+<!--  const firebaseConfig = {-->
+<!--    apiKey: "AIzaSyDFHMpgcXYR07hoxP30j6iYqJpjkvaCRi4",-->
+<!--    authDomain: "mmtex-db26f.firebaseapp.com",-->
+<!--    projectId: "mmtex-db26f",-->
+<!--    storageBucket: "mmtex-db26f.appspot.com",-->
+<!--    messagingSenderId: "1091773453003",-->
+<!--    appId: "1:1091773453003:web:b84bf811713234eb5c014e",-->
+<!--    measurementId: "G-E130HEJ3DY"-->
+<!--  };-->
+
+<!--  const app = initializeApp(firebaseConfig);-->
+<!--  const analytics = getAnalytics(app);-->
+<!--</script>-->
 </body>
 </html>

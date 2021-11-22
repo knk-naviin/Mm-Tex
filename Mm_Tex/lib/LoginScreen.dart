@@ -19,15 +19,15 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.center,
-                //   children: [
-                //     Image.asset(
-                //       "images/logo.jpg",
-                //       width: 500,
-                //     )
-                //   ],
-                // ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "images/logo.jpg",
+                      width: 500,
+                    )
+                  ],
+                ),
                 Padding(
                   padding: const EdgeInsets.only(top: 58.0),
                   child: SizedBox(

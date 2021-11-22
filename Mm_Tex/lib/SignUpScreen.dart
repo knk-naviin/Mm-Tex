@@ -1,16 +1,13 @@
-
-
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
-  String? firstname,lastname,email,password,confirmpassword,phone;
-
+  String? firstname, lastname, email, password, confirmpassword, phone;
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
@@ -28,7 +25,10 @@ class SignUpScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("images/textlogo.jpeg",width: 400,)
+                  Image.asset(
+                    "images/textlogo.jpeg",
+                    width: 400,
+                  )
                 ],
               ),
               Divider(),
@@ -37,11 +37,13 @@ class SignUpScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Sign Up",style: TextStyle(
-                        color: Colors.indigo,
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold
-                    ),)
+                    Text(
+                      "Sign Up",
+                      style: TextStyle(
+                          color: Colors.indigo,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold),
+                    )
                   ],
                 ),
               ),
@@ -53,18 +55,18 @@ class SignUpScreen extends StatelessWidget {
                     child: SizedBox(
                       width: 400,
                       child: TextFormField(
-                        onSaved: (value){
+                        onSaved: (value) {
                           firstname = value!;
                         },
-                        validator: (value){
-                          if(value!.isEmpty){
+                        validator: (value) {
+                          if (value!.isEmpty) {
                             return "Enter Firstname";
-                          }else{
+                          } else {
                             return null;
                           }
                         },
                         decoration: InputDecoration(
-                          // filled: true,
+                            // filled: true,
                             hintText: "First Name",
                             labelText: "Firstname",
                             labelStyle: TextStyle(color: Colors.indigo),
@@ -94,13 +96,13 @@ class SignUpScreen extends StatelessWidget {
                     child: SizedBox(
                       width: 400,
                       child: TextFormField(
-                        onSaved: (value){
+                        onSaved: (value) {
                           lastname = value!;
                         },
-                        validator: (value){
-                          if(value!.isEmpty){
+                        validator: (value) {
+                          if (value!.isEmpty) {
                             return "Enter Lastname";
-                          }else{
+                          } else {
                             return null;
                           }
                         },
@@ -135,15 +137,15 @@ class SignUpScreen extends StatelessWidget {
                     child: SizedBox(
                       width: 400,
                       child: TextFormField(
-                        onSaved: (value){
+                        onSaved: (value) {
                           email = value!;
                         },
                         validator: (email) =>
-                        email != null && !EmailValidator.validate(email)
-                            ? 'Enter a valid email'
-                            : null,
+                            email != null && !EmailValidator.validate(email)
+                                ? 'Enter a valid email'
+                                : null,
                         decoration: InputDecoration(
-                          // filled: true,
+                            // filled: true,
                             hintText: "Email",
                             labelText: "Email",
                             labelStyle: TextStyle(color: Colors.indigo),
@@ -173,13 +175,13 @@ class SignUpScreen extends StatelessWidget {
                     child: SizedBox(
                       width: 400,
                       child: TextFormField(
-                        onSaved: (value){
+                        onSaved: (value) {
                           password = value!;
                         },
-                        validator: (value){
-                          if(value!.isEmpty){
+                        validator: (value) {
+                          if (value!.isEmpty) {
                             return "Enter Password";
-                          }else{
+                          } else {
                             return null;
                           }
                         },
@@ -215,13 +217,13 @@ class SignUpScreen extends StatelessWidget {
                     child: SizedBox(
                       width: 400,
                       child: TextFormField(
-                        onSaved: (value){
+                        onSaved: (value) {
                           confirmpassword = value!;
                         },
-                        validator: (value){
-                          if(value!.isEmpty){
+                        validator: (value) {
+                          if (value!.isEmpty) {
                             return "Enter Confirm Password";
-                          }else{
+                          } else {
                             return null;
                           }
                         },
@@ -256,13 +258,13 @@ class SignUpScreen extends StatelessWidget {
                     child: SizedBox(
                       width: 400,
                       child: TextFormField(
-                        onSaved: (value){
+                        onSaved: (value) {
                           phone = value!;
                         },
-                        validator: (value){
-                          if(value!.isEmpty){
+                        validator: (value) {
+                          if (value!.isEmpty) {
                             return "Enter Phonenumber";
-                          }else if(value.length != 10){
+                          } else if (value.length != 10) {
                             return "Check Your Phonenumber";
                           }
                         },
@@ -299,8 +301,8 @@ class SignUpScreen extends StatelessWidget {
                       height: 40,
                       child: ElevatedButton(
                           style: ButtonStyle(
-                              backgroundColor:
-                              MaterialStateProperty.all(Colors.indigoAccent),
+                              backgroundColor: MaterialStateProperty.all(
+                                  Colors.indigoAccent),
                               elevation: MaterialStateProperty.all(0)),
                           child: Text(
                             "Sign in",
@@ -309,7 +311,7 @@ class SignUpScreen extends StatelessWidget {
                           onPressed: () {
                             if (formkey.currentState!.validate()) {
                               (formkey.currentState!.save());
-                              print(firstname!+lastname!);
+                              print(firstname! + lastname!);
                               print(email);
                               print(password);
                               print(phone);
